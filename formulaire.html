@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/formulaire.css">
+    <title></title>
+  </head>
+  <body>
+
+<div id="formulaire">
+
+<form action="traitement.php" >
+  <fieldset>
+<legend>Vos Coordonnées</legend>
+  <div>genre <em>*</em> : <input type="radio" name="sexe" id="Madame"><span for="madame" required>Madame</span>
+  <input type="radio" name="sexe" id="Monsieur"><span for="monsieur" required>Monsieur</span></div>
+
+  <div>Votre nom <em>*</em> :  <input type="text" id="nom" placeholder="Nom" autofocus required></div>
+  <div>Votre prénom <em>*</em> : <input type="text" id="prenom" placeholder="prénom" required></div>
+  <div>Votre email <em>*</em> : <input type="email" placeholder="exemple@test.fr" required></div>
+</fieldset>
+
+<fieldset>
+  <legend>Temps</legend>
+  <div id="temps">  Votre temps : <br> <span class ="minutes"> min </span> <span class="secondes"> secondes</span></div>
+</fieldset>
+
+</div>
+  <input type="submit" name="envoyer">
+  </body>
+</html>
