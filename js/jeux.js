@@ -1,7 +1,7 @@
 function atribution() {
   var num;
 
-  for (var i = 0; i < img.length; i++) {
+  for (var b = 0; b < img.length; b++) {
     var autoris = false;
     num = Math.floor(Math.random() * Math.floor(10));
     console.log(num);
@@ -80,15 +80,15 @@ function atribution() {
       }
     }
 
-    carte[i] = couleur;
-    console.log(carte[i]);
+    carte[b] = couleur;
+    console.log(carte[b]);
   }
 }
 
 function verifiAtribution(atribu) {
   var nombreAparu = 0;
-  for (var i = 0; i < img.length; i++) {
-      if (atribu == carte[i]) {
+  for (var a = 0; a < img.length; a++) {
+      if (atribu == carte[a]) {
         nombreAparu++;
       }
   }
@@ -101,10 +101,33 @@ function verifiAtribution(atribu) {
 }
 
 function retournVerif(carteNB){
-  img[carteNB].style.backgroundColor = carte[carteNB]; 
+  img[carteNB].style.backgroundColor = carte[carteNB];
+  retourn++;
+  console.log(retourn);
+  console.log(img.lenght);
+
+  if (retourn == 2) {
+    for (var c = 0; c < img.length; c++) {
+      if (img[carteNB].style.backgroundColor == img[c].style.backgroundColor) {
+        if (carteNB != c) {
+          img[c].src = '/memory/img/pokeball.png';
+          img[carteNB].src = '/memory/img/pokeball.png';
+        }
+      }
+    }
+  }
+
+  if (retourn > 2) {
+    retourn = 1;
+    for (var d = 0; d < img.length; d++) {
+      img[d].style.backgroundColor = 'black';
+    }
+    img[carteNB].style.backgroundColor = carte[carteNB];
+  }
 }
 
 var img = document.getElementsByTagName('img');
 var carte = new Array();
+var retourn = 0;
 
 atribution();
