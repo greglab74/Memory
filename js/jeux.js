@@ -35,13 +35,13 @@ function atribution() {
         var couleur = 'gold';
         break;
       case 0:
-        var couleur = 'silver';
+        var couleur = 'lightblue';
         break;
     }
 
     while (autoris == false) {
       autoris = verifiAtribution(couleur);
-      if (autoris == true) {
+      if (autoris == false) {
         num = Math.floor(Math.random() * Math.floor(10));
         console.log(num);
 
@@ -80,19 +80,19 @@ function atribution() {
       }
     }
 
-    img[i].style.background = couleur;
+    img[i].style.backgroundColor = couleur;
   }
 }
 
 function verifiAtribution(atribu) {
   var nombreAparu = 0;
   for (var i = 0; i < img.length; i++) {
-      if (atribu == img[i].style.background) {
+      if (atribu == img[i].style.backgroundColor) {
         nombreAparu++;
       }
   }
 
-  if (nombreAparu > 3) {
+  if (nombreAparu > 1) {
     return false;
   }else {
     return true;
