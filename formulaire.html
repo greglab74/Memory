@@ -7,25 +7,38 @@
   </head>
   <body>
 
-<div id="formulaire">
 
-<form action="traitement.php" >
-  <fieldset>
-<legend>Vos Coordonnées</legend>
-  <div>genre <em>*</em> : <input type="radio" name="sexe" id="Madame"><span for="madame" required>Madame</span>
-  <input type="radio" name="sexe" id="Monsieur"><span for="monsieur" required>Monsieur</span></div>
+    <div id="form-main">
+      <div id="form-div">
+        <form class="form" id="form1">
 
-  <div>Votre nom <em>*</em> :  <input type="text" id="nom" placeholder="Nom" autofocus required></div>
-  <div>Votre prénom <em>*</em> : <input type="text" id="prenom" placeholder="prénom" required></div>
-  <div>Votre email <em>*</em> : <input type="email" placeholder="exemple@test.fr" required></div>
-</fieldset>
+          <p clas="sexe">
+            <div>Genre <em>*</em> : <input type="radio" name="sexe" id="Madame"><span for="madame" required>Madame</span>
+            <input type="radio" name="sexe" id="Monsieur"><span for="monsieur" required>Monsieur</span></div>
 
-<fieldset>
-  <legend>Temps</legend>
-  <div id="temps">  Votre temps : <br> <span class ="minutes"> min </span> <span class="secondes"> secondes</span></div>
-</fieldset>
 
-</div>
-  <input type="submit" name="envoyer">
+          <p class="name">
+            Votre nom <em>*</em> : <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Nom" id="name" />
+          </p>
+
+          <p class="prenom">
+            Votre prénom <em>*</em> : <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Prénom" id="name" />
+          </p>
+
+          <p class="email">
+            Votre e-mail <em>*</em>: <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />
+          </p>
+
+          <div id="temps">  Votre temps : <span class ="minutes"> min </span> <span class="secondes"> secondes</span></div>
+
+
+          <div class="submit">
+            <input type="submit" value="envoyer" id="button-blue"/>
+            <div class="ease"></div>
+          </div>
+        </form>
+      </div>
+
+
   </body>
 </html>
