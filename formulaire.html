@@ -2,19 +2,43 @@
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/formulaire.css">
     <title></title>
   </head>
   <body>
 
 
-<div id="form">
-<form action="traitement.php">
+    <div id="form-main">
+      <div id="form-div">
+        <form class="form" id="form1">
 
-  <div><input type="radio" name="sexe" id="Madame"><span for="madame" required>Madame</span>
-  <input type="radio" name="sexe" id="Monsieur"><span for="monsieur" required>Monsieur</span></div>
+          <p clas="sexe">
+            <div>Genre <em>*</em> : <input type="radio" name="sexe" id="Madame"><span for="madame" required>Madame</span>
+            <input type="radio" name="sexe" id="Monsieur"><span for="monsieur" required>Monsieur</span></div>
 
-  <div>Votre nom : <input type="text" id="nom" placeholder="Nom" required></div>
-  <div>Votre prénom : <input type="text" id="prenom" placeholder="prénom" required></div>
-  <div>Votre email : <input type="email" placeholder="exemple@test.fr" required></div>
+
+          <p class="name">
+            Votre nom <em>*</em> : <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Nom" id="name" />
+          </p>
+
+          <p class="prenom">
+            Votre prénom <em>*</em> : <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Prénom" id="name" />
+          </p>
+
+          <p class="email">
+            Votre e-mail <em>*</em>: <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />
+          </p>
+
+          <div id="temps">  Votre temps : <span class ="minutes"> min </span> <span class="secondes"> secondes</span></div>
+
+
+          <div class="submit">
+            <input type="submit" value="envoyer" id="button-blue"/>
+            <div class="ease"></div>
+          </div>
+        </form>
+      </div>
+
+
   </body>
 </html>
