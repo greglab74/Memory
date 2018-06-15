@@ -15,5 +15,5 @@ function start() {
 var begin = setInterval(chrono,100) //la fonction start s'execute tous les disièmes de secondes
 }
 function stop() {
-  clearsetInterval(start) //arrête la fonction start
+  clearsetInterval(begin) //arrête la fonction start
 }
