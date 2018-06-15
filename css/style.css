@@ -46,15 +46,13 @@ box-shadow: 1px 1px 10px grey inset,
 header{
   position: relative;
   background: -webkit-linear-gradient(top, #ff0000 96%, #000 0% );
-  height: 155px;
+  height: 100px;
 }
 
 footer{
-/*  position: absolute; */
-  bottom: -100px;
   position: relative;
   background: -webkit-linear-gradient(top, #000 0%, #000 4%, #ff0000 0%);
-  height: 155px;
+  height: 100px;
 }
 
 #circle{
@@ -85,9 +83,8 @@ footer{
   display: none;
 }
 
-
 /* --------------------------------- */
 
 main{
-  height: calc(100vh - 153 - 153);
+  height: 784px;
 }
