@@ -11,60 +11,57 @@ header{
 }
 
 
-
 .container {
   padding-top: 5%;
 max-width: 878px;
   margin: 0 auto;
 }
 
+img{
+  width: 77px;
+  height: 77px;
+  padding-left: 23px;
+  padding-top: 15px;
+  position: relative;
+}
 .card {
   float: left;
   margin: 3%;
   height: 100px;
   width: 120px;
-  background-image: url("../img/pokeball.png");
-  background-size: 66%;
-  background-repeat: no-repeat;
-  background-position: center;
   border-radius: 5px;
   box-shadow: 10px 10px 10px #ccc;
 }
 
 .card:hover {
   cursor: pointer;
-
 }
 
-#bg{
+.card:active{
+  color: #000;
+box-shadow: 1px 1px 10px grey inset,
+            0 1px 0 rgba( 255, 255, 255, 0.4);
+}
+
+header{
   position: relative;
-  background: -webkit-linear-gradient(top,
-    #ff0000 48%,
-    #000 48%,
-    #000 53%,
-    #fff 0%);
-    height: 250px;
+  background: -webkit-linear-gradient(top, #ff0000 96%, #000 0% );
+  height: 155px;
 }
 
-#bg2{
+footer{
 /*  position: absolute; */
-  bottom: 0px;
-  left: 0;
-  right: 0;
-  z-index: 0;
-  background: -webkit-linear-gradient(bottom,
-    #ff0000 48%,
-    #000 48%,
-    #000 53%,
-    #fff 0%);
-    height: 250px;
+  bottom: -100px;
+  position: relative;
+  background: -webkit-linear-gradient(top, #000 0%, #000 4%, #ff0000 0%);
+  height: 155px;
 }
 
 #circle{
   position: absolute;
   width: 80px;
   height: 80px;
-  top: 50%;
+  top: 97%;
   left: 50%;
   margin: -40px 0 0 -40px;
   background: -webkit-radial-gradient(circle,
@@ -76,4 +73,21 @@ max-width: 878px;
               #fff 55%,
               #000 55%);
   border-radius: 40px;
+}
+
+/* BOUTON PLAY */
+.button{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: calc(100vh);
+  width: 100%;
+  display: none;
+}
+
+
+/* --------------------------------- */
+
+main{
+  height: calc(100vh - 153 - 153);
 }
