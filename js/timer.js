@@ -12,8 +12,8 @@ document.getElementById('minute').innerHTML=" "+minut //on affiche les minutes
 
 }
 function start() {
-var begin = setInterval(chrono,100) //la fonction start s'execute tous les disièmes de secondes
+var begin = setInterval(chrono,100); //la fonction start s'execute tous les disièmes de secondes
 }
 function stop() {
-  clearsetInterval(begin) //arrête la fonction start
+  clearInterval(12); //arrête la fonction start
 }
