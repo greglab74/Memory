@@ -3,17 +3,11 @@
   padding: 0;
 }
 
-header{
-
-  height: 10em;
-  line-height: 10em;
-  white-space: nowrap;
-}
 
 
 .container {
-  padding-top: 5%;
-max-width: 878px;
+  padding-top: 2%;
+ width: 878px;
   margin: 0 auto;
 }
 
@@ -46,13 +40,15 @@ box-shadow: 1px 1px 10px grey inset,
 header{
   position: relative;
   background: -webkit-linear-gradient(top, #ff0000 96%, #000 0% );
-  height: 100px;
-}
+  height: 150px;
+  }
+
 
 footer{
-  position: relative;
   background: -webkit-linear-gradient(top, #000 0%, #000 4%, #ff0000 0%);
-  height: 100px;
+  height: 150px;
+
+
 }
 
 #circle{
@@ -75,19 +71,39 @@ footer{
 
 /* BOUTON PLAY */
 .button{
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 0px;
   height: calc(100vh);
   width: 100%;
+  background-color: rgba(169, 0, 0, .8);
   display: none;
+
+}
+
+h1{
+text-align: center;
+line-height: calc(100vh);
+font-size: 200px;
+color: white;
+font-family: 'Cabin', sans-serif;
+}
+
+h1:hover {
+  cursor: pointer;
+}
+
+
+main {
+  height: calc(100vh - 200px);
+}
+
+p{
+text-align: center;
+margin-top: 80px;
+font-family: 'Cabin', sans-serif;
+font-size: 45px;
+
 }
 
 /* --------------------------------- */
-
-
-
-
-main{
-  height: 893px;
-}
