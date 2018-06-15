@@ -7,35 +7,36 @@ function atribution() {
     console.log(num);
 
     switch (num) {
+
+      case 0:
+        var couleur = '/memory/img/pkm1.png';
+        break;
       case 1:
-        var couleur = 'red';
+        var couleur = '/memory/img/pkm2.png';
         break;
       case 2:
-        var couleur = 'blue';
+        var couleur = '/memory/img/pkm3.png';
         break;
       case 3:
-        var couleur = 'green';
+        var couleur = '/memory/img/pkm4.png';
         break;
       case 4:
-        var couleur = 'pink';
+        var couleur = '/memory/img/pkm5.png';
         break;
       case 5:
-        var couleur = 'grey';
+        var couleur = '/memory/img/pkm6.png';
         break;
       case 6:
-        var couleur = 'orange';
+        var couleur = '/memory/img/pkm7.png';
         break;
       case 7:
-        var couleur = 'lightgrey';
+        var couleur = '/memory/img/pkm8.png';
         break;
       case 8:
-        var couleur = 'yellow';
+        var couleur = '/memory/img/pkm9.png';
         break;
       case 9:
-        var couleur = 'gold';
-        break;
-      case 0:
-        var couleur = 'lightblue';
+        var couleur = '/memory/img/pkm10.png';
         break;
     }
 
@@ -46,35 +47,36 @@ function atribution() {
         console.log(num);
 
         switch (num) {
+
+          case 0:
+            var couleur = '/memory/img/pkm1.png';
+            break;
           case 1:
-            var couleur = 'red';
+            var couleur = '/memory/img/pkm2.png';
             break;
           case 2:
-            var couleur = 'blue';
+            var couleur = '/memory/img/pkm3.png';
             break;
           case 3:
-            var couleur = 'green';
+            var couleur = '/memory/img/pkm4.png';
             break;
           case 4:
-            var couleur = 'pink';
+            var couleur = '/memory/img/pkm5.png';
             break;
           case 5:
-            var couleur = 'grey';
+            var couleur = '/memory/img/pkm6.png';
             break;
           case 6:
-            var couleur = 'orange';
+            var couleur = '/memory/img/pkm7.png';
             break;
           case 7:
-            var couleur = 'lightgrey';
+            var couleur = '/memory/img/pkm8.png';
             break;
           case 8:
-            var couleur = 'yellow';
+            var couleur = '/memory/img/pkm9.png';
             break;
           case 9:
-            var couleur = 'gold';
-            break;
-          case 0:
-            var couleur = 'lightblue';
+            var couleur = '/memory/img/pkm10.png';
             break;
         }
       }
@@ -101,17 +103,18 @@ function verifiAtribution(atribu) {
 }
 
 function retournVerif(carteNB){
-  img[carteNB].style.backgroundColor = carte[carteNB];
+  img[carteNB].src = carte[carteNB];
   retourn++;
   console.log(retourn);
-  console.log(img.lenght);
 
   if (retourn == 2) {
     for (var c = 0; c < img.length; c++) {
-      if (img[carteNB].style.backgroundColor == img[c].style.backgroundColor) {
+      if (img[carteNB].src == img[c].src) {
         if (carteNB != c) {
-          img[c].src = '/memory/img/pokeball.png';
-          img[carteNB].src = '/memory/img/pokeball.png';
+          img[c].src = carte[c];
+          img[c].className = 1;
+          img[carteNB].src = carte[carteNB];
+          img[carteNB].className = 1;
         }
       }
     }
@@ -120,14 +123,31 @@ function retournVerif(carteNB){
   if (retourn > 2) {
     retourn = 1;
     for (var d = 0; d < img.length; d++) {
-      img[d].style.backgroundColor = 'black';
+      if (img[d].className == 0)
+      img[d].src = '/memory/img/pokeball.png';
     }
-    img[carteNB].style.backgroundColor = carte[carteNB];
+    img[carteNB].src = carte[carteNB];
+  }
+
+  var compte = 0;
+  for (var i = 0; i < img.length; i++) {
+    if (img[i].className == 1) {
+      compte++;
+    }
+
+    if (compte == img.length) {
+      alert('FINI');
+    }
   }
 }
 
-var img = document.getElementsByTagName('img');
+var img = document.querySelectorAll('body img');
 var carte = new Array();
 var retourn = 0;
+
+for (var i = 0; i < img.length; i++) {
+  img[i].setAttribute('onclick', 'retournVerif(' + i + ')');
+  img[i].className = 0;
+}
 
 atribution();
