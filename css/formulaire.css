@@ -105,6 +105,7 @@ html{    background:url(https://www.pokepedia.fr/images/8/8b/Bourg-Palette.PNG) 
 #temps{
   font-weight: bold;
   color: red;
+  font-size: 25px;
 }
 textarea {
     width: 100%;
