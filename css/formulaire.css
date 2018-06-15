@@ -68,7 +68,7 @@ html{
 }
 
 /* Icons ---------------------------------- */
-#name{
+#nom{
 	background-image: url(https://www.pokepedia.fr/images/4/4f/Sprite_2_o_Red.png);
 	background-size: 30px 30px;
 	background-position: 8px 5px;
@@ -82,7 +82,7 @@ html{
   background-repeat: no-repeat;
 }
 
-#name:focus{
+#nom:focus{
 	background-image: url(https://www.pokepedia.fr/images/2/2d/Sprite_5_n2_Red.png);
 	background-size: 30px 30px;
 	background-position: 7px 5px;
@@ -146,10 +146,56 @@ input:focus, textarea:focus {
 em{
   color: red;
 }
+#button-blue{
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	float:left;
+	width: 100%;
+	border: #fbfbfb solid 4px;
+	cursor:pointer;
+	background-color: #3498db;
+	color:white;
+	font-size:24px;
+	padding-top:22px;
+	padding-bottom:22px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
 
-.bouton{
+#button-blue:hover{
+	background-color: rgba(0,0,0,0);
+	color: #0493bd;
+}
 
-  width: 80px;
-  height: 50px;
-  margin-left: 40%
+.submit:hover {
+	color: #3498db;
+}
+
+.ease {
+	width: 0px;
+	height: 74px;
+	background-color: #fbfbfb;
+	-webkit-transition: .3s ease;
+	-moz-transition: .3s ease;
+	-o-transition: .3s ease;
+	-ms-transition: .3s ease;
+	transition: .3s ease;
+}
+
+.submit:hover .ease{
+  width:100%;
+  background-color:white;
+}
+
+@media only screen and (max-width: 580px) {
+	#form-div{
+		left: 3%;
+		margin-right: 3%;
+		width: 88%;
+		margin-left: 0;
+		padding-left: 3%;
+		padding-right: 3%;
+	}
 }

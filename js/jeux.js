@@ -136,7 +136,7 @@ function retournVerif(carteNB){
     }
 
     if (compte == img.length) {
-      alert('FINI');
+      stop();
     }
   }
 }
