@@ -74,20 +74,21 @@ function atribution() {
             var couleur = 'gold';
             break;
           case 0:
-            var couleur = 'silver';
+            var couleur = 'lightblue';
             break;
         }
       }
     }
 
-    img[i].style.backgroundColor = couleur;
+    carte[i] = couleur;
+    console.log(carte[i]);
   }
 }
 
 function verifiAtribution(atribu) {
   var nombreAparu = 0;
   for (var i = 0; i < img.length; i++) {
-      if (atribu == img[i].style.backgroundColor) {
+      if (atribu == carte[i]) {
         nombreAparu++;
       }
   }
@@ -99,6 +100,11 @@ function verifiAtribution(atribu) {
   }
 }
 
+function retournVerif(carteNB){
+  img[carteNB].style.backgroundColor = carte[carteNB]; 
+}
+
 var img = document.getElementsByTagName('img');
+var carte = new Array();
 
 atribution();
