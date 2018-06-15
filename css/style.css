@@ -1,0 +1,79 @@
+*{
+  margin : 0;
+  padding: 0;
+}
+
+header{
+
+  height: 10em;
+  line-height: 10em;
+  white-space: nowrap;
+}
+
+
+
+.container {
+  padding-top: 5%;
+max-width: 878px;
+  margin: 0 auto;
+}
+
+.card {
+  float: left;
+  margin: 3%;
+  height: 100px;
+  width: 120px;
+  background-image: url("../img/pokeball.png");
+  background-size: 66%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
+  box-shadow: 10px 10px 10px #ccc;
+}
+
+.card:hover {
+  cursor: pointer;
+
+}
+
+#bg{
+  position: relative;
+  background: -webkit-linear-gradient(top,
+    #ff0000 48%,
+    #000 48%,
+    #000 53%,
+    #fff 0%);
+    height: 250px;
+}
+
+#bg2{
+/*  position: absolute; */
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  background: -webkit-linear-gradient(bottom,
+    #ff0000 48%,
+    #000 48%,
+    #000 53%,
+    #fff 0%);
+    height: 250px;
+}
+
+#circle{
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 50%;
+  left: 50%;
+  margin: -40px 0 0 -40px;
+  background: -webkit-radial-gradient(circle,
+              #fff,
+              #fff 40%,
+              #000 40%,
+              #000 45%,
+              #fff 45%,
+              #fff 55%,
+              #000 55%);
+  border-radius: 40px;
+}
