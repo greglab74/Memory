@@ -12,5 +12,8 @@ document.affiche.min.value=" "+minut //on affiche les minutes
 
 }
 function start() {
-setInterval(chrono,100) //la fonction start s'execute tous les disièmes de secondes
+var begin = setInterval(chrono,100) //la fonction start s'execute tous les disièmes de secondes
+}
+function stop() {
+  clearsetInterval(begin) //arrête la fonction start
 }
