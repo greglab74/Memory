@@ -30,6 +30,8 @@ html{    background:url(https://www.pokepedia.fr/images/8/8b/Bourg-Palette.PNG) 
 	margin-left: -260px;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
+    border-radius: 5%;
+    background-color: grey;
 }
 
 .feedback-input {
