@@ -11,9 +11,11 @@ document.getElementById('seconde').innerHTML=" "+secon //on affiche les secondes
 document.getElementById('minute').innerHTML=" "+minut //on affiche les minutes
 
 }
+var begin;
 function start() {
-var begin = setInterval(chrono,100); //la fonction start s'execute tous les disièmes de secondes
+begin = setInterval(chrono,100); //la fonction start s'execute tous les disièmes de secondes
+console.log(begin)
 }
 function stop() {
-  clearInterval(12); //arrête la fonction start
+  clearInterval(begin); //arrête la fonction start
 }
