@@ -99,7 +99,7 @@ h1:hover {
 
 
 main {
-  height: calc(100vh - 200px);
+  height: 100%;
 }
 
 p{
@@ -113,8 +113,7 @@ font-size: 45px;
 /* --------------------------------- */
 
 .container:after{
-  content: ""; /* Important, sinon l'élément n'est pas généré. */
-display: table;
+  content: "";
+display: block;
 clear: both;
-}
 }
