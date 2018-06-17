@@ -1,19 +1,13 @@
 
 function verifSexe() {
-
-  var monsieur = document.getelementById('homme').checked;
-  var madame = document.getelementById('femme').checked;
-
-
-  		// si aucun des boutons radio cochés alors on affiche un message d'erreur
-  	    if  (monsieur == false && madame == false) {
-  		alert("Veuillez cocher le bouton \"Mr\" ou \"Mme\", svp.");
-  		return false;
-  		}
-          else {
-                return true;
-              }
-            }
+    var radio = document.getElementsByName('sexe');
+    if (radio[0].checked == false && radio[1].checked == false) {
+        alert("Veuillez selectionner votre sexe");
+    return false;
+    } else {
+    return true;
+    }
+}
 
 function verifPrenom(champ)
             {
@@ -60,9 +54,9 @@ function verifMail(champ)
 
 function verifForm(f)
                 {
-                  var sexeOK = verifSexe(f.sexe)
-                  var prenomOk = verifPrenom(f.prenom);
+                  var sexeOK = verifSexe(f.sexe);
                   var nomOk = verifName(f.nom);
+                  var prenomOk = verifPrenom(f.prenom);
                   var mailOk = verifMail(f.email);
 
                   if(sexeOK && nomOk && prenomOk && mailOk) {
@@ -70,7 +64,7 @@ function verifForm(f)
                 }
                   else
                   {
-                    alert("Veuillez remplir correctement tous les champs");
+
                     return false;
                   }
                 }
