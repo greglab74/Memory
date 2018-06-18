@@ -13,24 +13,24 @@
 
     <div id="form-main" >
       <div id="form-div">
-        <div id="temps">  Votre temps : <span class ="minute"> min </span> <span class="seconde"> sec</span> <span class="dixieme"> dixiemes</span></div>
+        <div id="temps">  Votre temps : <span class ="minute"> min </span> <span class="seconde"> sec</span><span class="dixieme"> dixiemes</span></div>
         <form class="form" id="form1" action="traitement.php" onsubmit="return verifForm(this)">
 
           <p class="sexe">
-            <div>Genre <em>*</em> : <input type="radio" name="sexe"><span for="madame"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Venus_symbol.svg/1024px-Venus_symbol.svg.png" width="20px"</span>
-            <input type="radio" name="sexe" ><span for="monsieur" > <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Mars_symbol.svg/1200px-Mars_symbol.svg.png" width="20px"></span></div>
+            <div>Genre <em>*</em> : <input type="radio" name="sexe" id="Madame" required><span for="madame"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Venus_symbol.svg/1024px-Venus_symbol.svg.png" width="20px"</span>
+            <input type="radio" name="sexe" id="Monsieur" required><span for="monsieur" > <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Mars_symbol.svg/1200px-Mars_symbol.svg.png" width="20px"></span></div>
 
 
           <p class="name">
-            Votre nom <em>*</em> : <input name="nom" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Nom" id="nom" />
+            Votre nom <em>*</em> : <input name="nom" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Nom" id="nom" onblur="verifName(this)"/>
           </p>
 
           <p class="prenom">
-            Votre prénom <em>*</em> : <input name="prenom" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Prénom" id="prenom"  />
+            Votre prénom <em>*</em> : <input name="prenom" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Prénom" id="prenom" onblur="verifPrenom(this)" />
           </p>
-
+/
           <p class="email">
-            Votre e-mail <em>*</em>: <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />
+            Votre e-mail <em>*</em>: <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" onblur="verifMail(this)"/>
           </p>
 
 
@@ -41,7 +41,8 @@
             <div class="ease"></div>
         </form>
       </div>
-
+    </div>
+  </div>
 
   </body>
 </html>
