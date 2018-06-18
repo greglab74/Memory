@@ -137,6 +137,7 @@ function retournVerif(carteNB){
 
     if (compte == img.length) {
       stop();
+      document.getElementById('form-main').style.display = 'bloxk';
     }
   }
 }
