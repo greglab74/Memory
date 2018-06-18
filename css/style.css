@@ -51,8 +51,6 @@ header{
 footer{
   background: -webkit-linear-gradient(top, #000 0%, #000 4%, #ff0000 0%);
   height: 150px;
-
-
 }
 
 #circle{
@@ -107,6 +105,7 @@ text-align: center;
 margin-top: 80px;
 font-family: 'Cabin', sans-serif;
 font-size: 45px;
+margin-top: 4%;
 
 }
 
