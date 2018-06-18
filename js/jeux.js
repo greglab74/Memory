@@ -124,7 +124,7 @@ function retournVerif(carteNB){
     retourn = 1;
     for (var d = 0; d < img.length; d++) {
       if (img[d].className == 0)
-      img[d].src = '/memory/img/pokeball.png';
+      img[d].src = '/Memory/img/pokeball.png';
     }
     img[carteNB].src = carte[carteNB];
   }
@@ -137,12 +137,12 @@ function retournVerif(carteNB){
 
     if (compte == img.length) {
       stop();
-      document.getElementById('form-main').style.display = 'bloxk';
+      document.getElementById('form-main').style.display = 'block';
     }
   }
 }
 
-var img = document.querySelectorAll('body img');
+var img = document.querySelectorAll('.card img');
 var carte = new Array();
 var retourn = 0;
 
