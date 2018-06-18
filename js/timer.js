@@ -1,6 +1,6 @@
-var dixie=0 //initialisation minute,seconde,dixièmes à 0
-var secon=0
-var minut=0
+var dixie=0; //initialisation minute,seconde,dixièmes à 0
+var secon=0;
+var minut=0;
 
 function chrono(){
 dixie++; //incrémentation des dixièmes de 1
@@ -11,11 +11,10 @@ document.getElementsByClassName('seconde').innerHTML=" "+secon //on affiche les 
 document.getElementsByClassName('minute').innerHTML=" "+minut //on affiche les minutes
 
 }
-var begin;
+var begin
 function start() {
-begin = setInterval(chrono,100); //la fonction start s'execute tous les disièmes de secondes
-console.log(begin)
+begin = setInterval(chrono,100)//la fonction start s'execute tous les disièmes de secondes
 }
 function stop() {
-  clearInterval(begin); //arrête la fonction start
+  clearInterval(begin) //arrête la fonction start
 }

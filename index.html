@@ -4,7 +4,6 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="./css/style.css">
 		<link rel="stylesheet" href="./css/formulaire.css">
-		<script type="text/javascript" src="js/timer.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
 		<title></title>
 	</head>
@@ -14,7 +13,7 @@
 		</header>
 		<main>
 
--
+
 			<p> <span class="minute">0</span> : <span class="seconde">0</span> : <span class="dixieme">0</span> </p>
 
 
@@ -42,15 +41,10 @@
 		  </div>
 		</main>
 					<footer></footer>
-		<div class="button"  onclick="start()">
+		<div class="button"  onclick="play()">
 			<h1>PLAY !</h1>
 		</div>
 
-<<<<<<< HEAD
-		<script type="text/javascript" src="js/timer.js"></script>
-		<script type="text/javascript" src="js/play.js"></script>
-		<script type="text/javascript" src="js/jeux.js"></script>
-=======
 		<div id="form-main" >
 			<div id="form-div">
 				<div id="temps">  Votre temps : <span class ="minute"> min </span> <span class="seconde"> secondes</span> <span class="dixieme"> dixiemes</span></div>
@@ -68,7 +62,7 @@
 					<p class="prenom">
 						Votre prénom <em>*</em> : <input name="prenom" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Prénom" id="prenom" onblur="verifPrenom(this)" />
 					</p>
-	/
+
 					<p class="email">
 						Votre e-mail <em>*</em>: <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" onblur="verifMail(this)"/>
 					</p>
@@ -84,6 +78,10 @@
 		</div>
 	</div>
 
->>>>>>> c487bd686d942af136ecc1757a96619d6e728d8a
+
+
+		<script type="text/javascript" src="js/timer.js"></script>
+		<script type="text/javascript" src="js/play.js"></script>
+		<!--<script type="text/javascript" src="js/jeux.js"></script>-->
 	</body>
 </html>

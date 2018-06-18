@@ -1,6 +1,4 @@
 function play() {
-  document.querySelector('.bouton').style.display = 'none';
+  document.getElementsByClassName('button')[0].style.display = 'none';
   start();
 }
-
-document.querySelector('.bouton').setAttribute('onclick', 'play()');
